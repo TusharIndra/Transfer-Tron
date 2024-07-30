@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Ready for Download</title>
+    <link rel="stylesheet" href="/css/download_style.css">
+</head>
+
+<body>
+    <!-- <img src="./public/transfer-tron-high-resolution-logo.png" alt="TransferTorn" class="logo"> -->
+    <div class="container">
+        <div class="message">
+            <% if (locals.error){%>
+                <h1><%=locals.error%></h1>
+            <%}else{%>
+                <h1>Your file is ready to be downloaded!</h1>
+                <p><strong>File Name:</strong> <span id="fileName"><%=fileName%></span></p>
+                <p><strong>File Size:</strong> <span id="fileSize"><%=parseInt(fileSize)/1000%> kb</span></p>
+                <p class="expire-message">Link expires in 24 hrs</p>
+                <a id="downloadLink" href="<%= download%>" class="download-btn">Download File</a>
+            <%}%>
+        </div>
+    </div>
+
+    <!-- <script>
+        // Function to get URL parameters
+        function getQueryParam(param) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(param);
+        }
+
+        // Retrieve parameters
+        const fileName = getQueryParam('fileName');
+        const fileSize = getQueryParam('fileSize');
+        const fileUrl = getQueryParam('fileUrl');
+
+        // Update the page content with parameters
+        document.getElementById('fileName').textContent = fileName ? fileName : 'Unknown File';
+        document.getElementById('fileSize').textContent = fileSize ? fileSize : 'Unknown Size';
+        document.getElementById('downloadLink').href = fileUrl ? fileUrl : '#';
+    </script> -->
+</body>
+
+</html>

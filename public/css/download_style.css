@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, rgba(2, 24, 103, 0.795) 0%, rgba(9, 121, 167, 0.795) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    width: 600px;
+    max-width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.message h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.message p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.download-btn {
+    background: linear-gradient(135deg, rgba(4, 67, 255, 0.952) 0%, rgba(0, 184, 255, 0.952) 100%);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s ease-in-out;
+}
+
+.download-btn:hover {
+    background: linear-gradient(135deg, rgba(0, 184, 255, 0.952) 0%, rgba(4, 67, 255, 0.952) 100%);
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 150px;
+}
