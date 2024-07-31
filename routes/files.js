@@ -22,11 +22,11 @@ let upload = multer({
 router.post('/',(req,res)=>{
     upload(req,res,async(err)=>{
         //validates request
-        if(!req.file)return res.json({error: 'all fields are required!'});
-
         if(err){
             return res.status(500).send({error: err.message});
         }
+        if(!req.file)return res.json({error: 'all fields are required!'});
+
 
         //store into database
         const file = new File({
